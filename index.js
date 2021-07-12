@@ -1,3 +1,4 @@
+  
 const tutorials = [
   'what does the this keyword mean?',
   'What is the Constructor OO pattern?',
@@ -11,6 +12,18 @@ const tutorials = [
   'what is JSONP?'
 ];
 
-const titleCased = () => {
-  return tutorials
+const titleCased = (ale) => {
+  return tutorials.map( line => {
+    const currency = line.split(' ');
+    const bitCurrency =
+      currency.map( token => token.charAt(0).toUpperCase() + token.slice(1) );
+    const answer = bitCurrency.join(' ');
+    return answer;
+  });
 }
+
+
+
+
+
+
